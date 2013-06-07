@@ -1,10 +1,10 @@
 var DuckUp = {
     model : function() {
-        objSize : 32;
-        gameCanvas : document.getElementById('canvas');
-        gameContext : gameCanvas.getContext('2d');
-        canvasX : (gameCanvas.width / 2) - objSize;
-        canvasY : (gameCanvas.height / 2) - objSize;        
+        var objSize = 32;
+        var gameCanvas = document.getElementById('canvas');
+        var gameContext = gameCanvas.getContext('2d');
+        var canvasX = (gameCanvas.width / 2) - objSize;
+        var canvasY = (gameCanvas.height / 2) - objSize;        
     },
     init: function() {
         //window.addEventListener('keydown', move, true);
