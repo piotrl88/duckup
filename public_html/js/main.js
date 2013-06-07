@@ -1,10 +1,10 @@
 var DuckUp = {
-    model : function() {
-        var objSize = 32;
-        var gameCanvas = document.getElementById('canvas');
-        var gameContext = gameCanvas.getContext('2d');
-        var canvasX = (gameCanvas.width / 2) - objSize;
-        var canvasY = (gameCanvas.height / 2) - objSize;        
+    model : {
+        objSize : 32,
+        gameCanvas : document.getElementById('canvas'),
+//        gameContext : DuckUp.model.gameCanvas.getContext('2d'),
+//        canvasX : (DuckUp.model.gameCanvas.width / 2) - objSize,
+//        canvasY : (DuckUp.model.gameCanvas.height / 2) - objSize
     },
     init: function() {
         //window.addEventListener('keydown', move, true);
@@ -13,14 +13,14 @@ var DuckUp = {
     enemy: function() {
         var enemyImg = new Image();
         enemyImg.onload = function() {
-            this.model.gameContext.drawImage(enemyImg, this.model.canvasX, this.model.canvasY, this.model.objSize, this.model.objSize);
+            //this.model.gameContext.drawImage(enemyImg, this.model.canvasX, this.model.canvasY, this.model.objSize, this.model.objSize);
         };
         enemyImg.src = 'img/fox.png';
     },
     player: function() {
         var playerImg = new Image();
         playerImg.onload = function() {
-            this.model.gameContext.drawImage(playerImg, 0, 0, this.model.objSize, this.model.objSize);
+            //this.model.gameContext.drawImage(playerImg, 0, 0, this.model.objSize, this.model.objSize);
         };
         playerImg.src = 'img/duck.png';
 
